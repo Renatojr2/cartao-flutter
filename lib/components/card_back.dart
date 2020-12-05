@@ -21,24 +21,33 @@ class CardNubankBack extends StatelessWidget {
                   top: 30,
                   child: Container(
                     height: 65,
-                    width: double.infinity,
+                    width: MediaQuery.of(context).size.width,
                     color: Colors.grey[200],
                   ),
                 ),
                 Positioned(
-                  child: Row(
-                    children: [
-                      Text(
-                        '9999 99999 9999 9999',
-                        style: TextStyle(
-                          color: Colors.white,
+                  bottom: 20,
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 30),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          '9999 99999 9999 9999',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 18,
+                          ),
                         ),
-                      ),
-                      Image.asset(
-                        'assets/cirrus.png',
-                        width: 60,
-                      ),
-                    ],
+                        SizedBox(
+                          width: 50,
+                        ),
+                        Image.asset(
+                          'assets/cirrus.png',
+                          width: 60,
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ],

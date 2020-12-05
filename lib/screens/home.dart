@@ -11,27 +11,8 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  bool flag;
-  FlipDirection direction = FlipDirection.HORIZONTAL;
-
-  setFlagValue() {
-    setState(
-      () {
-        flag = !flag;
-      },
-    );
-  }
-
-  @override
-  void initState() {
-    super.initState();
-    flag = true;
-  }
-
   @override
   Widget build(BuildContext context) {
-    final double width = MediaQuery.of(context).size.width;
-    final double height = MediaQuery.of(context).size.height;
     return Scaffold(
       appBar: AppBar(
         actions: [
@@ -40,18 +21,16 @@ class _HomePageState extends State<HomePage> {
               padding: EdgeInsets.fromLTRB(0, 0, 10, 0),
               child: Icon(Icons.credit_card_outlined),
             ),
-            onTap: () => setFlagValue(),
+            onTap: () {},
           )
         ],
         title: Text('Cartão Nunbak'),
       ),
       body: Container(
-        width: width,
-        height: height,
         padding: EdgeInsets.all(10),
         color: Theme.of(context).accentColor,
         child: FlipCard(
-          direction: direction,
+          direction: FlipDirection.VERTICAL,
           back: CardNubankBack(),
           front: CardNubankFront(),
         ),

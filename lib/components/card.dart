@@ -20,10 +20,7 @@ class CardNubankFront extends StatelessWidget {
                 Positioned(
                   right: 15,
                   top: 15,
-                  child: Image.asset(
-                    'assets/mastercard.png',
-                    height: 50,
-                  ),
+                  child: Image.asset('assets/mastercard.png', height: 50,),
                 ),
                 Positioned(
                   top: 60,
